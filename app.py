@@ -1,0 +1,7 @@
+print("Welcome to the Game of Rock Paper Scissors!")
+print("############ RULE #############")
+print("# Rock wins against Scissors  #")
+print("#   Paper wins against Rock   #")
+print("# Scissors wins against Paper #")
+print("###############################")
+print("Choose Rock, Paper or Scissors: ")
