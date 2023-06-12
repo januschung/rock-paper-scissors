@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: dispatch trigger
-    - env:
+      env:
         MESSAGE: ${{ github.event.client_payload.message }}
       run: |
         echo "repository_dispatch triggered with message $MESSAGE"
