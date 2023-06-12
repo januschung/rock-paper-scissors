@@ -1,0 +1,16 @@
+name: dispatch receiver test
+
+on: 
+  repository_dispatch:
+    types: [foo]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: dispatch trigger
+    - env:
+        MESSAGE: ${{ github.event.client_payload.message }}
+      run: |
+        echo "repository_dispatch triggered with message $MESSAGE"
