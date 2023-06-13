@@ -2,7 +2,7 @@ name: dispatch receiver test
 
 on: 
   repository_dispatch:
-    types: [foo]
+    types: [api-team]
 
 jobs:
   build:
@@ -13,4 +13,4 @@ jobs:
       env:
         MESSAGE: ${{ github.event.client_payload.message }}
       run: |
-        echo "repository_dispatch triggered with message $MESSAGE"
+        echo "$MESSAGE"
